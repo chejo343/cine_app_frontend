@@ -14,7 +14,7 @@
         >
           <v-card>
             <v-img :src="item.poster"></v-img>
-            <div class="d-flex align-center fill-height" style="height: 80px;">
+            <div class="d-flex align-center fill-height" style="height: 81px;">
               <v-card-title class="text-center subtitle-1">{{ item.nombre }}</v-card-title>
             </div>
             <v-rating
