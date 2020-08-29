@@ -114,7 +114,7 @@ export default {
   methods: {
     async getFunciones (funcion) {
       const fecha = dayjs().format('YYYY-MM-DD')
-      const { data } = await this.$api.get(`/funcions?pelicula=${this.pelicula.id}&fecha_eq=${funcion.fecha}&hora_inicio_gte=${funcion.hora}&_sort=sala:ASC`)
+      const { data } = await this.$api.get(`/funcions?pelicula=${this.pelicula.id}&fecha_eq=${funcion.fecha}&hora_inicio_gte=${funcion.hora}&_sort=sala:DESC`)
       this.funciones = data.map(i => ({
         ...i,
         hora_inicio: dayjs(`${fecha}T${i.hora_inicio}`).format('HH:mm')
